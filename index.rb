@@ -1,4 +1,6 @@
 require "tty-prompt"
+require "./character"
+require "./race"
 
 def welcome
     prompt = TTY::Prompt.new
@@ -15,6 +17,14 @@ def welcome
     when 2
         randomize_new
     end
+end
+
+def create_new
+    new_character = Character.new 
+end
+
+def randomize_new
+    randomized_character = Character.new
 end
 
 welcome

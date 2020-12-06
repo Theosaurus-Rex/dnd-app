@@ -23,4 +23,6 @@ The DnD Character Generator is designed to walk users through creating a basic p
 ## Installation & Dependencies
 - Download `dnd-app` from Github
 - Run `index.rb`
+- Gems used: **rspec** for testing and **tty-prompt** for user interfacing. Both are included with this download
+- Please note that this program may not run correctly in **bash** terminals.
 
