@@ -1,9 +1,20 @@
+require "tty-prompt"
+
+prompt = TTY::Prompt.new
+
+welcome_choices = [
+    {name: "Create New Character", value: 1},
+    {name: "Generate Randomized Character", value: 2}
+]
+
 def welcome
+    prompt = TTY::Prompt.new
+    welcome_choices = [
+        {name: "Create New Character", value: 1},
+        {name: "Generate Randomized Character", value: 2}
+    ]
     puts "Welcome to the DnD 5e Character Creator"
-    puts "Please select from the following options using numbers:"
-    puts "1. Create New Character"
-    puts "2. Generate Randomized Character"
-    input = gets.to_i
+    user_input = prompt.select("What would you like to do?", welcome_choices)
     if input == 1
         create_new
     if input == 2
